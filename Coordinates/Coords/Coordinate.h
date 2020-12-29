@@ -53,5 +53,9 @@ public:
 	static float Magnitude(const Coord& ptr) {
 		return sqrt(pow(ptr.getX(), 2) + pow(ptr.getY(), 2) + pow(ptr.getZ(), 2));
 	}
-};
 
+	// Scalar multiplication
+	Coord Scale(float a) const {
+		return Coord(this->getX() * a, this->getY() * a, this->getZ() * a);
+	}
+};
