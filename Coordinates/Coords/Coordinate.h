@@ -44,5 +44,14 @@ public:
 	Coord operator/(const Coord& ptr) const {
 		return Coord(this->getX() / ptr.getX(), this->getY() / ptr.getY(), this->getZ() / ptr.getZ());
 	}
+
+	// Magnitude
+	float Magnitude() const {
+		return sqrt(pow(this->getX(), 2) + pow(this->getY(), 2) + pow(this->getZ(), 2));
+	}
+
+	static float Magnitude(const Coord& ptr) {
+		return sqrt(pow(ptr.getX(), 2) + pow(ptr.getY(), 2) + pow(ptr.getZ(), 2));
+	}
 };
 
